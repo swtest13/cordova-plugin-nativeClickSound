@@ -9,15 +9,15 @@ Android part based on a blog post from [@pieterderycke](https://pieterderycke.wo
 ## Installation
 
 ``` bash
-cordova plugin add https://github.com/MatiMenich/cordova-plugin-nativeClickSound
+cordova plugin add https://github.com/swtest13/cordova-plugin-nativeClickSound.git
 ```
 
 ## Usage
+The ngTouch librery in AngularJS overwrites the ngClick and, using stopPropagation(), prevents it from bubbling up.
+So using the default nativeclick.js wan't work. The call needs to be made from with in the element.
 
 ```js
-var clickyClasses = ['sound-click', 'button']; 
-
-nativeclick.watch(clickyClasses);
+ nativeclick.trigger();
 ```
 
 ## License
